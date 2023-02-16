@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.3.css">
+    <title>Test</title>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.3.js"></script>
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+
+    <script>
+        function view(){};
+
+        QUnit.test("Displaying correct name and age", function(assert){
+            let expectedNameAgeString = "Name: Daniel<br />Age: 38";
+            calc("Daniel", 1985);
+            assert.equal(nameAgeString, expectedNameAgeString);
+        });
+    </script>
+</body>
+</html>
